@@ -12,7 +12,15 @@ router.get('/', async (req, res) => {
   }
 })
 
-
+//SHOW
+router.get('/:id', async (req, res) => {
+  try {
+    const foundMeals = await Meal.findById(req.params.id);
+    res.status(200).json(foundMeals)
+  } catch(err) {
+    res.status(400).json({ error: err.message })
+  }
+})
 
 //CREATE
 router.post('/', async (req, res) => {
