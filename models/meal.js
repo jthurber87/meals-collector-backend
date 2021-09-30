@@ -4,7 +4,7 @@ const mealSchema = mongoose.Schema({
   name: {type: String, required: true},
   meal: {type: String, required: true},
   calories: {type: Number, default: 0},
-  date: {type: Date}
+  date: {type: Date, default: new Date()}
   // macros: {
   //   protein: {
   //     type: Number
