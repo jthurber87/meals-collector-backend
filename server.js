@@ -1,5 +1,8 @@
-const cors = require("cors");
+//dep
+require('dotenv').config()
+require('./db/db')
 const express = require('express')
+const cors = require('cors')
 const app = express()
 const PORT = 9000
 const mealsController = require('./controllers/mealsCollector.js')
